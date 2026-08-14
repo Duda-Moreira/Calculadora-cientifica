@@ -4,6 +4,12 @@ Uma calculadora científica moderna desenvolvida com Java, Spring Boot, React e 
 
 O objetivo deste projeto é fornecer uma experiência completa para realização de cálculos matemáticos, combinando uma interface moderna com um motor de cálculo robusto desenvolvido em Java.
 
+## 🎯 Objetivo
+
+Desenvolver uma calculadora científica moderna utilizando Java e Spring Boot no backend e React com TypeScript no frontend.
+
+O projeto busca ir além de uma calculadora tradicional, oferecendo recursos avançados como histórico persistente, favoritos, gráficos matemáticos, conversão de unidades, modo programador e exportação de dados.
+
 ## 🚀 Funcionalidades
 
 ### Cálculos Básicos
@@ -83,6 +89,30 @@ Responsável por:
 ---
 
 ## 📋 Roadmap
+
+## 🚀 MVP (Primeira Versão)
+
+As funcionalidades abaixo serão implementadas inicialmente:
+
+- [ ] Operações matemáticas básicas
+- [ ] Operações científicas
+- [ ] Parser de expressões matemáticas
+- [ ] Histórico de operações
+- [ ] Sistema de memória
+- [ ] Interface moderna
+- [ ] Temas personalizáveis
+
+## 🔮 Futuras Implementações
+
+Recursos planejados para versões futuras:
+
+- [ ] Sistema de favoritos
+- [ ] Conversor de unidades
+- [ ] Gráficos matemáticos
+- [ ] Modo programador
+- [ ] Exportação de histórico
+- [ ] Persistência em banco de dados
+- [ ] Autenticação de usuários
 
 ### Estrutura Inicial
 
