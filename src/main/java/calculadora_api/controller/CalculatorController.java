@@ -5,6 +5,9 @@ import calculadora_api.dto.CalculationResponse;
 import calculadora_api.service.CalculatorService;
 import calculadora_api.model.Calculation;
 import calculadora_api.service.HistoryService;
+import calculadora_api.dto.FavoriteRequest;
+import calculadora_api.model.FavoriteCalculation;
+import calculadora_api.service.FavoriteService;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -16,13 +19,16 @@ import java.util.List;
 public class CalculatorController {
     private final CalculatorService calculatorService;
     private final HistoryService historyService;
+    private final FavoriteService favoriteService;
 
     public CalculatorController(
         CalculatorService calculatorService,
-        HistoryService historyService
+        HistoryService historyService,
+        FavoriteService favoriteService
     ) {
         this.calculatorService = calculatorService;
         this.historyService = historyService;
+        this.favoriteService = favoriteService;
     }
 
     @PostMapping("/calculate")
@@ -48,5 +54,22 @@ public class CalculatorController {
     @GetMapping("/history")
     public List<Calculation> history() {
         return historyService.getHistory();
+    }
+
+    @PostMapping("/favorite")
+    public void favorite(
+        @RequestBody FavoriteRequest request
+    ) {
+        favoriteService.add(
+            new FavoriteCalculation(
+                request.getExpression(),
+                request.getResult()
+            )
+        );
+    }
+
+    @GetMapping("/favorites")
+    public List<FavoriteCalculation> favorites() {
+        return favoriteService.getFavorites();
     }
 }
